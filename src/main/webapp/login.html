@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Log in from here</title>
+  <link rel="icon" type="image/x-icon" href="icon.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" type="text/css" href="./css/login.css">
+  
+</head>
+
+<body class="overflow-hidden">
+  <div class="container w-[600px] h-auto mx-auto mt-[5%]">
+    
+    <p class="text-4xl font-bold">User Login</p>
+
+    <form id="loginForm" action="LogIn.jsp" method="post" onsubmit="return validate()">
+      <div class="frm"><input type="text" id="firstname" placeholder="Username" name="username" required></div>
+
+      <div class="frm"><input type="password" id="password" placeholder="Password" name="password" required></div>
+      
+      <div class="frm">
+		  <select name="role" id="role" class="w-[100%] rounded-xl p-[10px] py-[12px] border-[1px] border-[#cccc] focus:border-[1px] focus:border-black" required>
+							<option value="no value">Select your role</option>
+							<option value="reader">Reader</option>
+							<option value="staff">Staff</option>
+		  </select>
+	  </div>
+
+      <input id="button" type="submit" value="Log In" class="mt-4">
+    </form>
+
+  </div>
+  
+  <script>
+	  function validate(){
+		  let role = document.querySelector("#role").value;
+		  if(role == "no value"){
+			  alert("Please select your role");
+			  return false;
+		  }
+	  }
+  </script>
+
+</body>
+
+</html>

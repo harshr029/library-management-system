@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE-edge'>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <title>Sign Up from here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/signup1.css">
+</head>
+
+<body class="select-none overflow-x-hidden h-screen">
+    <div class="outer-box">
+        <div class="inner-box w-[900px] absolute top-[50%] left-[17.5%]">
+            <header class="signup-header">
+                <h1>Sign up</h1>
+                <!-- <p>it just takes 2 mins</p> -->
+            </header>
+            <main class="signup-body">
+                <form action="signUp.jsp" method="post" onsubmit="return validate()">
+					<div class="flex flex-row justify-between">
+                    <p class="w-[30%] inline-block">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="Enter your first name" name="fname" required value="John">
+                    </p>
+                    
+                     <p class="w-[30%] inline-block">
+                        <label for="lname" class="inline">Last Name</label>
+                        <input type="text" id="lname" placeholder="Enter your last name" name="lname" value="Doe">
+                    </p>
+                    
+                    <p class="w-[30%] inline-block">
+                        <label for="email" class="inline">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" name="email" value="johnDoe029@gmail.com">
+                    </p>
+                    </div>
+                    
+                    <div class="flex justify-between">
+                    <p class="w-[30%] inline-block">
+                        <label for="uname">User Name</label>
+                        <input type="text" id="uname" placeholder="Enter your user name" name="uname" required value="harshr029">
+                    </p>
+                    
+                    <p class="w-[30%] inline-block">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="minimum of length 8" required value="Hello123">
+                    </p>
+                    
+                    <p class="w-[30%] inline-block">
+						<label for="role">Enter your role</label>
+						<select name="role" id="role" class="w-[100%] rounded-2xl p-[10px] border-[2px] border-[#cccc]" required>
+							<option value="no value">Select your role</option>
+							<option value="reader">Reader</option>
+							<option value="staff">Staff</option>
+						</select>
+                    </p>
+                    </div>
+                    
+                    <div class="flex justify-between">
+					<p class="w-[30%] inline-block">
+                        <label for="hnumber">House Number</label>
+                        <input type="text" id="hnumber" placeholder="Enter house number" name="hnumber" value="R-23313">
+                    </p>
+                    
+                     <p class="w-[30%] inline-block">
+                        <label for="street">Street</label>
+                        <input type="text" id="street" placeholder="Enter your street" name="street" value="Santa Cruze Street">
+                    </p>
+                    
+                    <p class="w-[30%] inline-block">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter your city" name="city" required value="Mumbai">
+                    </p>
+					</div>
+					
+					<div class="flex justify-between">
+					<p class="w-[45%] inline-block">
+                        <label for="state">Enter your state</label>
+						<select name="state" id="state" class="w-[100%] rounded-2xl p-[10px] border-[2px] border-[#cccc]" required>
+							<option value="no value">Select your state</option>
+	<option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Odisha">Odisha</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="Telangana">Telangana</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+						</select>
+                    </p>
+                    
+                     <p class="w-[45%] inline-block">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" name="phone" required value="6312711234">
+                    </p>
+					</div>
+              
+                    <p>
+                        <input type="submit" id="submit">
+                    </p>
+                </form>
+            </main>
+            <footer class="signup-footer">
+                <p>Already have an account?<a href="./login.html" target="_self">Login</a></p>
+            </footer>
+        </div>
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+    </div>
+    
+    <script>
+		function validate(){
+			let fname = document.querySelector("#fname").value;
+			let lname = document.querySelector("#lname").value;
+			let city = document.querySelector("#city").value;
+			let pass = document.querySelector("#password").value;
+			
+			let role = document.querySelector("#role").value;
+			let phone = document.querySelector("#phone").value;
+			
+			var reg = /^[a-zA-Z ]+$/;
+			
+			if(!fname.match(reg)){
+				alert("First Name can only contain alphabets");
+				return false;
+			}
+			
+			if(lname != null && (!lname.match(reg))){
+				alert("Last Name can only contain alphabets");
+				return false;
+			}
+			
+			if(pass.length < 8){
+				alert("Password must be of minimum 8 length");
+				return false;	
+			}
+			
+			if(role == "no value"){
+				alert("Please select your role");
+				return false;
+			}
+			
+			if(!city.match(reg)){
+				alert("Please enter a valid city name");
+				return false;
+			}
+			
+			if(phone.length != 10 ){
+				alert("Please enter a valid phone number");
+				return false;
+			}
+			
+		}
+	</script>
+</body>
+
+</html>
